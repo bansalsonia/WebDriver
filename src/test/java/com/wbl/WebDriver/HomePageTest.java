@@ -7,11 +7,14 @@ import com.wbl.pages.HomePage;
 
 public class HomePageTest extends BaseTest {
 	
-	HomePage hm;
+	HomePage hm ;
 	
 	@Test
 	public void homePageTest(){
-		hm.search("Laptop");
+		hm = new HomePage(driver);
+		String actual = hm.search("Laptop");
+		System.out.println("Title of page is - " +actual);
+		Assert.assertEquals("Laptop - Walmart.com", actual);
 	}
 	
 	
