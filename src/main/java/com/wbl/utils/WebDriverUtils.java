@@ -20,17 +20,17 @@ public class WebDriverUtils {
 		switch(browserName){
 		
 		case "chrome":
-			System.setProperty("WebDriver.chrome.driver", System.getProperty("user.dir")+"/resources/drivers/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/resources/drivers/chromedriver.exe");
 		    driver = new ChromeDriver();
 		    break;
 		   
 		    case "firefox":
-				System.setProperty("WebDriver.gecko.driver", System.getProperty("user.dir")+"/resources/drivers/geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/resources/drivers/geckodriver.exe");
 			    driver = new FirefoxDriver();
 			    break;   
 		  
 		    case "ie":
-				System.setProperty("WebDriver.ie.driver", System.getProperty("user.dir")+"/resources/drivers/IEDriverServer.exe");
+				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/resources/drivers/IEDriverServer.exe");
 			    driver = new InternetExplorerDriver();
 			    break; 
 			    
@@ -44,7 +44,7 @@ public class WebDriverUtils {
 			    break;
 			    
 			    default :
-			    	System.setProperty("WebDriver.chrome.driver", System.getProperty("user.dir")+"/resources/drivers/chromedriver.exe");
+			    	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/resources/drivers/chromedriver.exe");
 				    driver = new ChromeDriver();
 				    
 				 }
